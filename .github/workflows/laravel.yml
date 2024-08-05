@@ -27,6 +27,6 @@ jobs:
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
-      run: composer install --optimize-autoloader --no-dev
+      run: composer install --optimize-autoloader
     - name: Execute tests (Unit and Feature tests) via PHPUnit/Pest
       run: php artisan test
